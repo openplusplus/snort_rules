@@ -1,3 +1,5 @@
+# Rules for OceanLotus detection
+
 alert http $HOME_NET any -> $EXTERNAL_NET any (
   msg:”Volex – OceanLotus JavaScript Load (connect.js)”; 
   flow:to_server,established; 
@@ -28,3 +30,5 @@ alert http $EXTERNAL_NET any -> $HOME_NET any (
   content:”linkStorage.x00SOCKET”; 
   sid:2017083003;
   )
+
+[Source](https://www.volexity.com/blog/2017/11/06/oceanlotus-blossoms-mass-digital-surveillance-and-exploitation-of-asean-nations-the-media-human-rights-and-civil-society/)  
