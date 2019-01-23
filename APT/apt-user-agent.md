@@ -24,7 +24,7 @@ alert tcp $EXT_NET any -> $INTRANET $HTTP_PORTS (
 	fast_pattern:only; 
 	pcre:"/^User\x20Agent\x3a\x20Mozilla\/5\x2e0\x20\x28Windows\x3b\x20U\x3b\x20Windows\x20NT\x205\x2e1\x3b\x20zh\x2dEN\x3b\x20rv\x3a1\x2e7\x2e12\x29\x20(Gecko\/200|Gecko\/20100719\x20Firefox\/1\x2e0\x2e7)"; 
 	content:"Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-EN; rv:1.7.12) Gecko/200";
-) #funciona
+)
 
 alert tcp $EXT_NET any -> $INTRANET $HTTP_PORTS (
 	msg:"APT User-Agent Detected"; 
